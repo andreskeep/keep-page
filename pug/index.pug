@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=7")
+		meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="desciption", content="Agencia digital y audiovisual")
+		title Keep agencia
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet", href="css/bootstrap.min.css")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Pacifico")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Sacramento")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i")
+		link(rel="stylesheet", href="css/sweetalert.css")
+		script(src="js/sweetalert.min.js")
+	body
+		div.nav-icon#nav-icon
+			span
+			span
+			span
+		#overlay-menu.overlay-menu
+			.overlay-dos
+			.overlay-tres
+				.footer-menu
+					.row
+						.col-md-4
+						.col-md-4
+						.col-md-4
+			#menu-nav.menu-nav.text-center
+				ul
+					li
+						a(href="#", class="menu-item", id="menu-item-1")
+							| Inicio
+							span
+					li
+						a(href="#", class="menu-item", id="menu-item-2") 
+							| Acerca
+							span
+					li
+						a(href="#", class="menu-item", id="menu-item-3") 
+							| Portafolio
+							span
+					li
+						a(href="#", class="menu-item", id="menu-item-4") 
+							| Contacto
+							span
+		#content.content
+			img(src="img/lianas.png", alt="", class="lianas")
+			img(src="img/matas-izq.png", alt="", class="matas-izq izq-matas")
+			.matas-der.der-matas
+				.ojo.ojo1
+				.ojo.ojo2
+				.ojo.ojo3
+			img(src="img/matas-der-sup.png", alt="", class="matas-der-sup der-matas")
+			img(src="img/matas-izq-sup.png", alt="", class="matas-izq-sup izq-matas")
+			img(src="img/astronauta.png", alt="", class="astronauta")
+			.asteroide
+				img(src="img/asteroide.png", alt="", class="asteroide-img")
+				img(src="img/asteroide-blur.png", alt="", class="asteroide-blur")
+			#logo.logo
+				img(src="img/logo.png", alt="", class="logo-principal", id="logotipo")
+				img(src="img/logo-blur.png", alt="", class="logo-blur")
+				.row.justify-content-md-center.justify-content-sm-center
+					.col
+						a(href="#" class="btn btn-primary home-buttons" id="entrar") 
+							span Acerca
+							i( class="fa fa-sort-desc", aria-hidden="true")
+					.col
+						a(href="#" class="btn btn-primary home-buttons" id="portafolio", style="") 
+							span Portafolio
+							i( class="fa fa-sort-desc", aria-hidden="true")
+					.col
+						a(href="#" class="btn btn-primary home-buttons" id="contact", style="")
+							span Contáctanos
+							i( class="fa fa-sort-desc", aria-hidden="true")
+				br
+				br
+				.row.justify-content-md-center.justify-content-sm-center.justify-content-xs-center.redes
+					p.text-center.col-md-12 
+						|Síguenos
+						br
+						a(href="https://www.facebook.com/keepagencia/", class="red face col")
+						a(href="https://www.instagram.com/keepagency/?hl=es", class="red inst col")
+			.modal-contact
+				i( class="fa fa-times", aria-hidden="true", class="close" id="close-contact")
+				.form-container
+					form(action="", method="post")
+						.row.justify-content-md-center
+							.col-md-12
+								img(src="img/contactanos.png", alt="", class="img-fluid title-form")
+								.form-grup
+									//label(for="") Asunto
+									input(type="text" class="form-control campo" placeholder="Ingresa tu asunto")
+								br
+								.form-grup
+									//label(for="") Nombre
+									input(type="text" class="form-control campo" placeholder="Ingresa tu nombre")
+								br
+								.form-grup
+									//label(for="") Telefono
+									input(type="text" class="form-control campo" placeholder="Ingresa tu número telefónico")
+								br
+								.form-grup
+									//label(for="") Email
+									input(type="text" class="form-control campo" placeholder=" Ingresa tu correo electrónico")
+								br
+								.row.justify-content-md-center
+									input(type="submit" class="btn btn-primary send")
+			a(href="index.html", class="logo-secundary", id="logo-secundary")
+					img(src="img/logo.png", alt="")
+			section#main.main
+				.wrapper
+					.container-section
+						.container
+							#about.about
+								h1.text-center 
+									span.one ¿Quiénes
+									span.two somos?
+								p.text-about  
+									span Lorem ipsum dolor
+									|  sit amet, consectetur adipisicing elit. Quos voluptate qui quae fugiat cupiditate. Qui asperiores maxime earum sequi facere, deserunt dolorem. Nemo deserunt, commodi aliquid, sapiente autem quae ad.
+									a(href="#" id="arrow-down")
+										i.fa.fa-arrow-down
+					.container-section.servicios
+						.container
+							.row.container-info-servicios
+								.col-md-3.servicio
+									.col-md-12
+										img(src="img/icono.gif", alt="" style="width: 100%;")
+									.col-md-12.info-servicio-text
+										.col-md-12
+											h1.service-title
+												i(class="fa fa-1 fa-plus" aria-hidden="true")
+												| Servicio 1
+												i(class="fa fa-2 fa-plus" aria-hidden="true")
+												span
+											p  
+												span Lorem ipsum dolor 
+												| sit amet, consectetur adipisicing elit. Doloribus adipisci sapiente impedit velit architecto illum. Fuga beatae sapiente cumque, doloremque quisquam. Facere excepturi magni ad vero deleniti, ut amet eaque.
+								.col-md-3.servicio
+									.col-md-12
+										img(src="img/icono.gif", alt="" style="width: 100%;")
+									.col-md-12.info-servicio-text
+										.col-md-12
+											h1.service-title
+												i(class="fa fa-1 fa-plus" aria-hidden="true")
+												| Servicio 2
+												i(class="fa fa-2 fa-plus" aria-hidden="true")
+												span
+											p  
+												span Lorem ipsum dolor 
+												| sit amet, consectetur adipisicing elit. Doloribus adipisci sapiente impedit velit architecto illum. Fuga beatae sapiente cumque, doloremque quisquam. Facere excepturi magni ad vero deleniti, ut amet eaque.
+								.col-md-3.servicio
+									.col-md-12
+										img(src="img/icono.gif", alt="" style="width: 100%;")
+									.col-md-12.info-servicio-text
+										.col-md-12
+											h1.service-title
+												i(class="fa fa-1 fa-plus" aria-hidden="true")
+												| Servicio 3
+												i(class="fa fa-2 fa-plus" aria-hidden="true")
+												span
+
+											p  
+												span Lorem ipsum dolor 
+												| sit amet, consectetur adipisicing elit. Doloribus adipisci sapiente impedit velit architecto illum. Fuga beatae sapiente cumque, doloremque quisquam. Facere excepturi magni ad vero deleniti, ut amet eaque.
+								.col-md-3.servicio
+									.col-md-12
+										img(src="img/icono.gif", alt="" style="width: 100%;")
+									.col-md-12.info-servicio-text
+										.col-md-12
+											h1.service-title
+												i(class="fa fa-1 fa-plus" aria-hidden="true")
+												| Servicio 4
+												i(class="fa fa-2 fa-plus" aria-hidden="true")
+												span
+											p  
+												span Lorem ipsum dolor 
+												| sit amet, consectetur adipisicing elit. Doloribus adipisci sapiente impedit velit architecto illum. Fuga beatae sapiente cumque, doloremque quisquam. Facere excepturi magni ad vero deleniti, ut amet eaque.
+			section#portfolio-section.portfolio-section
+				.container
+					.row
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic obcaecati necessitatibus similique ipsum, esse saepe est dolorem nobis. Neque voluptatum laboriosam animi recusandae ducimus, corporis quos excepturi impedit aut commodi.
+			#foot.foot
+		
+				
+		script(src="js/jquery-3.2.1.min.js")
+		script(src="js/jquery.mousewheel.min.js")
+		script(src="js/bootstrap.min.js")
+		script(src="js/functions.js")
+		script(src="js/scroll-functions.js")
+			
+		
+
+	
