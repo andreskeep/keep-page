@@ -38,17 +38,19 @@ navIcon.on('click', function(){
 });
 
 $('#menu-item-1').on('click', function(e){
-	overlay.toggleClass('active-menu');
-	overlay2.toggleClass('active-menu');
-	overlay3.toggleClass('active-menu');
-	navIcon.removeClass('open');
-	e.preventDefault();
-	if( $('#main').hasClass('main-active') || $('#portfolio-section').hasClass('portfolio-show')){
-		console.log('about activo');
+	if($('#logo').hasClass('logo-principal-hidden') && $('#main').hasClass('main-active')){
+		$('#logo').removeClass('logo-principal-hidden');
+		e.preventDefault();
+
+		$('.wrapper').animate({
+				top : '0vh',
+		}, 1000);
+		
 		logoSecundary.animate({
 		top: '-100px',
 		});
 		
+
 		$('.content').css({
 			backgroundColor : '#1b1b1b',
 		});
@@ -78,59 +80,218 @@ $('#menu-item-1').on('click', function(e){
 		}, 1500);
 
 		setTimeout(function(){
-			main.toggleClass('main-active');
-			$('#portfolio-section').removeClass('portfolio-show');
-		}, 500);
-	}else{
-		console.log('about inactivo');
+			main.removeClass('main-active');
+		}, 500)
 
-	};
+		about.removeClass('active-about');
 
-	about.removeClass('active-about');
+	} else if ( $('#logo').hasClass('logo-principal-hidden') && $('#portfolio-section').hasClass('portfolio-show') ){
+		
+		$('#logo').removeClass('logo-principal-hidden');
+		e.preventDefault();
 
-	setTimeout(function(){
-		menuNav.removeClass('active-menu-text')
-	}, 500);
-
-});
-
-$('#menu-item-2').on('click', function(){
-	overlay.toggleClass('active-menu');
-	overlay2.toggleClass('active-menu');
-	overlay3.toggleClass('active-menu');
-
-	if( $('#main').not('main-active') && $('#portfolio-section').hasClass('portfolio-show')){
 		$('.wrapper').animate({
 			top : '0vh',
 		}, 1000);
-		setTimeout(function(){
-			main.addClass('main-active');
-			about.addClass('active-about');
-		}, 500);
+
 		$('#portfolio-section').removeClass('portfolio-show');
-	}else{
+		
+		logoSecundary.animate({
+		top: '-100px',
+		});
+
+		$('#logo').animate({
+		top: '+=100%',
+		}, 2000);
+
+		$('#foot').animate({
+			bottom: '+=300px',
+		}, 1000);
+
+		$('.izq-matas').animate({
+			left : '+=500px',
+		}, 1600);
+
+		$('.der-matas').animate({
+			right : '+=500px',
+		}, 1500);
+
+	 	$('.lianas').animate({
+			top: '+=200px',
+		}, 2000);
+
+		$('.astronauta').animate({
+			top : '-=100%',
+		}, 1500);
+		
+	} else{
 
 	}
-	navIcon.removeClass('open');
-	setTimeout(function(){
-		menuNav.removeClass('active-menu-text')
-	}, 500);
+});
+
+$('#menu-item-2').on('click', function(){
+	if($('#logo').hasClass('logo-principal-hidden') && $('#main').hasClass('main-active')){
+
+	} else if( $('#logo').hasClass('logo-principal-hidden') && $('#portfolio-section').hasClass('portfolio-show') && $('#main').not('main-active')){
+
+		setTimeout(function(){
+			$('#portfolio-section').removeClass('portfolio-show');
+		}, 500);
+
+		setTimeout(function(){
+		main.addClass('main-active');
+		}, 500);
+
+		about.addClass('active-about');
+
+	}else{
+
+		$('#logo').addClass('logo-principal-hidden');
+
+		$('.wrapper').animate({
+				top : '0vh',
+			}, 1000);
+
+		$('.content').css({
+			backgroundColor : '#1b1b1b',
+		});
+
+		$('#logo').animate({
+			top: '-=100%',
+		}, 2000);
+
+		$('#foot').animate({
+			bottom: '-=300px',
+		}, 1000);
+
+		$('.izq-matas').animate({
+			left : '-=500px',
+		}, 1600);
+
+		$('.der-matas').animate({
+			right : '-=500px',
+		}, 1500);
+
+	 	$('.lianas').animate({
+			top: '-=200px',
+		}, 2000);
+
+		$('.astronauta').animate({
+			top : '+=100%',
+		}, 1500);
+
+		setTimeout(function(){
+			main.addClass('main-active');
+		}, 800);
+
+		setTimeout(function(){
+				logoSecundary.animate({
+					top: '+=150px',
+				})
+		}, 1000)
+
+		about.addClass('active-about');
+	}
 });
 
 
 $('#menu-item-3').on('click',function(){
-	overlay.toggleClass('active-menu');
-	overlay2.toggleClass('active-menu');
-	overlay3.toggleClass('active-menu');
-	navIcon.removeClass('open');
-	setTimeout(function(){
-		menuNav.removeClass('active-menu-text')
-	}, 500);
-	if($('#main').hasClass('main-active') && $('#portfolio-section').not('portfolio-show')){
-		$('#main').removeClass('main-active');
+	if( ($('#logo').hasClass('logo-principal-hidden')) == false && ($('#portfolio-section').not('portfolio-show')) && ($('#main').not('main-active'))  ){
+		
+		$('#logo').addClass('logo-principal-hidden');
+		$('.wrapper').animate({
+				top : '0vh',
+			}, 1000);
+
+		$('.content').css({
+			backgroundColor : '#1b1b1b',
+		});
+
+		$('#logo').animate({
+			top: '-=100%',
+		}, 2000);
+
+		$('#foot').animate({
+			bottom: '-=300px',
+		}, 1000);
+
+		$('.izq-matas').animate({
+			left : '-=500px',
+		}, 1600);
+
+		$('.der-matas').animate({
+			right : '-=500px',
+		}, 1500);
+
+	 	$('.lianas').animate({
+			top: '-=200px',
+		}, 2000);
+
+		$('.astronauta').animate({
+			top : '+=100%',
+		}, 1500);
+
+		setTimeout(function(){
+				logoSecundary.animate({
+					top: '+=150px',
+				})
+		}, 1000);
+
+		setTimeout(function(){
+			main.removeClass('main-active');
+		}, 500)
+
+		about.removeClass('active-about');
+		
+		setTimeout(function(){
+			$('#portfolio-section').addClass('portfolio-show');
+		}, 500);
+
+
+
+
+	}else if( $('#logo').hasClass('logo-principal-hidden') && $('#portfolio-section').not('portfolio-show') ) {
+		$('#logo').addClass('logo-principal-hidden');
+
+		$('.wrapper').animate({
+				top : '0vh',
+			}, 1000);
+
+		$('#logo').animate({
+			top: '-=100%',
+		}, 2000);
+
+		$('#foot').animate({
+			bottom: '-=300px',
+		}, 1000);
+
+		$('.izq-matas').animate({
+			left : '-=500px',
+		}, 1600);
+
+		$('.der-matas').animate({
+			right : '-=500px',
+		}, 1500);
+
+	 	$('.lianas').animate({
+			top: '-=200px',
+		}, 2000);
+
+		$('.astronauta').animate({
+			top : '+=100%',
+		}, 1500);
+
+		setTimeout(function(){
+			main.removeClass('main-active');
+		}, 500)
+
+		about.removeClass('active-about');
+
+		setTimeout(function(){
 		$('#portfolio-section').addClass('portfolio-show');
+		}, 600);
 	}else{
-		console.log('ninguno activo');
+
 	}
 });
 
@@ -149,6 +310,8 @@ $('#menu-item-4').on('click', function(){
 
 
 entrar.click(function(){
+
+	$('#logo').addClass('logo-principal-hidden');
 
 	$('.wrapper').animate({
 			top : '0vh',
@@ -198,6 +361,7 @@ entrar.click(function(){
 
 logoSecundary.on('click', function(e){
 
+	$('#logo').removeClass('logo-principal-hidden');
 	e.preventDefault();
 
 	$('.wrapper').animate({
@@ -259,6 +423,7 @@ $('.service-title').on('click',function(){
 });
 
 $('#portafolio').on('click', function(){
+	$('#logo').addClass('logo-principal-hidden');
 	$('.wrapper').animate({
 			top : '0vh',
 		}, 1000);
