@@ -27,7 +27,7 @@ function findScrollDirectionOtherBrowsers(event){
             delta = -1 * event.deltaY;
     }
 
-    if (delta < 0 ){
+    if (delta < 0 && $('#logo').hasClass('logo-principal-hidden')){
     	let wrapperPosition = $('.wrapper').offset().top;
     	let height = $(window).height();
     	console.log('La posición del wrapper es: ' + wrapperPosition);
@@ -47,7 +47,7 @@ function findScrollDirectionOtherBrowsers(event){
 
         console.log("DOWN");
 
-    }else if (delta > 0 ){
+    } else if (delta > 0 && $('#logo').hasClass('logo-principal-hidden')){
     	let wrapperPosition = $('.wrapper').offset().top;
     	let height = $(window).height();
     	console.log('La posición del wrapper es: ' + wrapperPosition);
