@@ -126,6 +126,8 @@ input:placeholder
 	background:
 		color: #5B5D61
 	transition: .9s ease-in
+	@media screen and(max-width: 768px)
+		width: 100%
 	& .overlay-dos
 		display: block
 		width: 30%
@@ -137,6 +139,8 @@ input:placeholder
 		background:
 			color: #FFC600
 		transition: .4s ease-in
+		@media screen and(max-width: 768px)
+			width: 100%
 		&.active-menu
 			top: 0%
 			transition: 1s ease-out
@@ -151,14 +155,24 @@ input:placeholder
 		background:
 			color: #222325
 		transition: .4s ease-out
+		@media screen and(max-width: 768px)
+			width: 100%
 		& .footer-menu
 			position: absolute
 			bottom: 0
 			left: 0
 			width: 100%
-			background:
-				color: red
 			padding: 10px
+			& footer-icon
+					width: 40px
+					height: 40px
+					display: block
+					float: left
+					& img
+							width: 100%
+							height: auto
+							display: block
+
 		&.active-menu
 			top: 0%
 			transition: 1.2s ease-out
