@@ -1033,7 +1033,7 @@ input:placeholder {
 .content .main {
   opacity: 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
   transition: .5s ease-in-out;
 }
 
@@ -1049,14 +1049,32 @@ input:placeholder {
   top: 0;
 }
 
-/* line 577, sass/style.sass */
+/* line 576, sass/style.sass */
+.content .main .wrapper .quienes-somos {
+  z-index: 100;
+}
+
+/* line 578, sass/style.sass */
+.content .main .wrapper .servicios {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 578, sass/style.sass */
+  .content .main .wrapper .servicios {
+    height: 100vh !important;
+    display: none !important;
+  }
+}
+
+/* line 583, sass/style.sass */
 .content .main .wrapper .servicios .servicio {
   opacity: 0;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
 }
 
-/* line 580, sass/style.sass */
+/* line 586, sass/style.sass */
 .content .main .wrapper .servicios .servicio.show-servicio {
   opacity: 1;
   -webkit-transform: translateY(0px);
@@ -1064,7 +1082,7 @@ input:placeholder {
   transition: 0.6s ease-in-out;
 }
 
-/* line 584, sass/style.sass */
+/* line 590, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1077,7 +1095,7 @@ input:placeholder {
           align-items: center;
 }
 
-/* line 588, sass/style.sass */
+/* line 594, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title {
   color: yellow;
   font-size: 1.4em;
@@ -1088,7 +1106,7 @@ input:placeholder {
   transition: .4s ease-in-out;
 }
 
-/* line 596, sass/style.sass */
+/* line 602, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title i.fa {
   opacity: 0;
   padding: 10px;
@@ -1099,45 +1117,45 @@ input:placeholder {
   transition: .3s ease-in-out;
 }
 
-/* line 603, sass/style.sass */
+/* line 609, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title i.fa-1 {
   opacity: 0;
   transition: .2s ease-in-out;
 }
 
-/* line 606, sass/style.sass */
+/* line 612, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title i.fa-2 {
   opacity: 0;
   transition: .5s ease-in-out;
 }
 
-/* line 609, sass/style.sass */
+/* line 615, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title:hover {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
 
-/* line 611, sass/style.sass */
+/* line 617, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title:hover span {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
 
-/* line 613, sass/style.sass */
+/* line 619, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title:hover i.fa-1 {
   opacity: 1;
   -webkit-transform: translate(-10px, -5px);
           transform: translate(-10px, -5px);
 }
 
-/* line 616, sass/style.sass */
+/* line 622, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title:hover i.fa-2 {
   opacity: 1;
   -webkit-transform: translate(10px, -5px);
           transform: translate(10px, -5px);
 }
 
-/* line 619, sass/style.sass */
+/* line 625, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text h1.service-title span {
   width: 30%;
   height: 3px;
@@ -1150,7 +1168,7 @@ input:placeholder {
   transition: .4s ease-in-out;
 }
 
-/* line 630, sass/style.sass */
+/* line 636, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text p {
   opacity: 0;
   font-weight: 100;
@@ -1160,18 +1178,18 @@ input:placeholder {
   padding-top: 10px;
 }
 
-/* line 637, sass/style.sass */
+/* line 643, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text p.show-text {
   opacity: 1;
 }
 
-/* line 639, sass/style.sass */
+/* line 645, sass/style.sass */
 .content .main .wrapper .servicios .info-servicio-text p span {
   font-weight: 900;
   color: white;
 }
 
-/* line 642, sass/style.sass */
+/* line 648, sass/style.sass */
 .content .main .wrapper .container-section {
   height: 100vh;
   display: -webkit-box;
@@ -1186,7 +1204,7 @@ input:placeholder {
   position: relative;
 }
 
-/* line 648, sass/style.sass */
+/* line 654, sass/style.sass */
 .content .main .wrapper .container-section .about {
   opacity: 0;
   position: relative;
@@ -1194,20 +1212,20 @@ input:placeholder {
   transition: 1.5s ease-in-out;
 }
 
-/* line 653, sass/style.sass */
+/* line 659, sass/style.sass */
 .content .main .wrapper .container-section .about.active-about {
   opacity: 1;
   top: 0px;
 }
 
-/* line 656, sass/style.sass */
+/* line 662, sass/style.sass */
 .content .main .wrapper .container-section .about span {
   font-weight: 900;
   font-size: 1.5em;
   color: yellow;
 }
 
-/* line 660, sass/style.sass */
+/* line 666, sass/style.sass */
 .content .main .wrapper .container-section .about h1 {
   text-transform: uppercase;
   font-weight: 900;
@@ -1216,14 +1234,23 @@ input:placeholder {
   padding: 50px 0;
 }
 
-/* line 666, sass/style.sass */
+@media screen and (max-width: 510px) {
+  /* line 666, sass/style.sass */
+  .content .main .wrapper .container-section .about h1 {
+    padding-top: 70px;
+    padding-bottom: 5px;
+    font-size: 1.6em;
+  }
+}
+
+/* line 676, sass/style.sass */
 .content .main .wrapper .container-section .about h1 span {
   position: relative;
   text-shadow: 2px 2px 2px black;
   z-index: 0;
 }
 
-/* line 670, sass/style.sass */
+/* line 680, sass/style.sass */
 .content .main .wrapper .container-section .about h1 span.two {
   position: relative;
   display: block;
@@ -1231,7 +1258,7 @@ input:placeholder {
   font-family: 'Pacifico', cursive;
 }
 
-/* line 675, sass/style.sass */
+/* line 685, sass/style.sass */
 .content .main .wrapper .container-section .about p.text-about {
   margin: 0 auto;
   width: 50%;
@@ -1240,7 +1267,15 @@ input:placeholder {
   line-height: 3em;
 }
 
-/* line 681, sass/style.sass */
+@media screen and (max-width: 510px) {
+  /* line 685, sass/style.sass */
+  .content .main .wrapper .container-section .about p.text-about {
+    width: 90%;
+    font-size: 1em;
+  }
+}
+
+/* line 694, sass/style.sass */
 .content .main .wrapper .container-section .about p.text-about a {
   display: block;
   text-align: center;
@@ -1254,7 +1289,7 @@ input:placeholder {
           animation-iteration-count: infinite;
 }
 
-/* line 689, sass/style.sass */
+/* line 702, sass/style.sass */
 .content .portfolio-section {
   position: absolute;
   top: 100%;
@@ -1273,14 +1308,14 @@ input:placeholder {
           align-items: center;
 }
 
-/* line 699, sass/style.sass */
+/* line 712, sass/style.sass */
 .content .portfolio-section.portfolio-show {
   opacity: 1;
   top: 0;
   left: 0;
 }
 
-/* line 703, sass/style.sass */
+/* line 716, sass/style.sass */
 .content .foot {
   position: absolute;
   bottom: 0;

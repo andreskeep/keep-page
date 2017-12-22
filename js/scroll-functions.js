@@ -15,6 +15,7 @@ $('#arrow-down').on('click', function(){
     });
 });
 
+
 $('body')[0].addEventListener('wheel', findScrollDirectionOtherBrowsers);
 
 

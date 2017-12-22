@@ -565,7 +565,7 @@ input:placeholder
 	& .main
 		opacity: 0
 		width: 100%
-		height: 100vh
+		height: auto
 		transition: .5s ease-in-out
 		&.main-active
 			opacity: 1
@@ -573,7 +573,13 @@ input:placeholder
 		& .wrapper
 			position: relative
 			top: 0
+			& .quienes-somos
+				z-index: 100
 			& .servicios
+				overflow: hidden
+				@media screen and(max-width:800px)
+					height: 100vh !important
+					display: none !important
 				& .servicio
 					opacity: 0
 					transform: translateY(40px)
@@ -663,6 +669,10 @@ input:placeholder
 						color: white
 						font-size: 2.5em
 						padding: 50px 0
+						@media screen and(max-width: 510px)
+							padding-top: 70px
+							padding-bottom: 5px
+							font-size: 1.6em
 						& span 
 							position: relative
 							text-shadow: 2px 2px 2px black;
@@ -678,6 +688,9 @@ input:placeholder
 						text-align: center
 						font-size: 1.2em
 						line-height: 3em
+						@media screen and(max-width:510px)
+							width: 90%
+							font-size: 1em
 						& a
 							display: block
 							text-align: center

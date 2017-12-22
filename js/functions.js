@@ -38,9 +38,18 @@ navIcon.on('click', function(){
 });
 
 $('#menu-item-1').on('click', function(e){
+	overlay.toggleClass('active-menu');
+	overlay2.toggleClass('active-menu');
+	overlay3.toggleClass('active-menu');
+	navIcon.removeClass('open');
+	setTimeout(function(){
+		menuNav.removeClass('active-menu-text')
+	}, 500);
+	e.preventDefault();
 	if($('#logo').hasClass('logo-principal-hidden') && $('#main').hasClass('main-active')){
+
 		$('#logo').removeClass('logo-principal-hidden');
-		e.preventDefault();
+		
 
 		$('.wrapper').animate({
 				top : '0vh',
@@ -56,27 +65,27 @@ $('#menu-item-1').on('click', function(e){
 		});
 
 		$('#logo').animate({
-			top: '+=100%',
+			top: '50%',
 		}, 2000);
 
 		$('#foot').animate({
-			bottom: '+=300px',
+			bottom: '0px',
 		}, 1000);
 
 		$('.izq-matas').animate({
-			left : '+=500px',
+			left : '0px',
 		}, 1600);
 
 		$('.der-matas').animate({
-			right : '+=500px',
+			right : '0px',
 		}, 1500);
 
 	 	$('.lianas').animate({
-			top: '+=200px',
+			top: '0px',
 		}, 2000);
 
 		$('.astronauta').animate({
-			top : '-=100%',
+			top : '30%',
 		}, 1500);
 
 		setTimeout(function(){
@@ -101,27 +110,27 @@ $('#menu-item-1').on('click', function(e){
 		});
 
 		$('#logo').animate({
-		top: '+=100%',
+			top: '50%',
 		}, 2000);
 
 		$('#foot').animate({
-			bottom: '+=300px',
+			bottom: '0px',
 		}, 1000);
 
 		$('.izq-matas').animate({
-			left : '+=500px',
+			left : '0px',
 		}, 1600);
 
 		$('.der-matas').animate({
-			right : '+=500px',
+			right : '0px',
 		}, 1500);
 
 	 	$('.lianas').animate({
-			top: '+=200px',
+			top: '0px',
 		}, 2000);
 
 		$('.astronauta').animate({
-			top : '-=100%',
+			top : '30%',
 		}, 1500);
 		
 	} else{
@@ -130,6 +139,13 @@ $('#menu-item-1').on('click', function(e){
 });
 
 $('#menu-item-2').on('click', function(){
+	overlay.toggleClass('active-menu');
+	overlay2.toggleClass('active-menu');
+	overlay3.toggleClass('active-menu');
+	navIcon.removeClass('open');
+	setTimeout(function(){
+		menuNav.removeClass('active-menu-text')
+	}, 500);
 	if($('#logo').hasClass('logo-principal-hidden') && $('#main').hasClass('main-active')){
 
 	} else if( $('#logo').hasClass('logo-principal-hidden') && $('#portfolio-section').hasClass('portfolio-show') && $('#main').not('main-active')){
@@ -196,6 +212,13 @@ $('#menu-item-2').on('click', function(){
 
 
 $('#menu-item-3').on('click',function(){
+	overlay.toggleClass('active-menu');
+	overlay2.toggleClass('active-menu');
+	overlay3.toggleClass('active-menu');
+	navIcon.removeClass('open');
+	setTimeout(function(){
+		menuNav.removeClass('active-menu-text')
+	}, 500);
 	if( ($('#logo').hasClass('logo-principal-hidden')) == false && ($('#portfolio-section').not('portfolio-show')) && ($('#main').not('main-active'))  ){
 		
 		$('#logo').addClass('logo-principal-hidden');
@@ -380,31 +403,31 @@ logoSecundary.on('click', function(e){
 	});
 
 	$('#logo').animate({
-		top: '+=100%',
-	}, 2000);
+			top: '50%',
+		}, 2000);
 
-	$('#foot').animate({
-		bottom: '+=300px',
-	}, 1000);
+		$('#foot').animate({
+			bottom: '0px',
+		}, 1000);
 
-	$('.izq-matas').animate({
-		left : '+=500px',
-	}, 1600);
+		$('.izq-matas').animate({
+			left : '0px',
+		}, 1600);
 
-	$('.der-matas').animate({
-		right : '+=500px',
-	}, 1500);
+		$('.der-matas').animate({
+			right : '0px',
+		}, 1500);
 
- 	$('.lianas').animate({
-		top: '+=200px',
-	}, 2000);
+	 	$('.lianas').animate({
+			top: '0px',
+		}, 2000);
 
-	$('.astronauta').animate({
-		top : '-=100%',
-	}, 1500);
+		$('.astronauta').animate({
+			top : '30%',
+		}, 1500);
 
 	setTimeout(function(){
-		main.addClass('main-active');
+		main.removeClass('main-active');
 	}, 500)
 
 	about.removeClass('active-about');
